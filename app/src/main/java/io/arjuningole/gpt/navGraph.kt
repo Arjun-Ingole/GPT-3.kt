@@ -24,7 +24,7 @@ fun SetupNavGraph(
         composable(
             Screen.Output.route
         ){
-            OutputScreen(story)
+            OutputScreen(navController)
         }
     }
 }
