@@ -15,7 +15,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
+            android:label="GPT-3 Playground"
             android:theme="@style/Theme.Gpt">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
