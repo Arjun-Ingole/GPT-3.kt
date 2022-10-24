@@ -18,6 +18,7 @@ android {
         vectorDrawables {
             useSupportLibrary true
         }
+        buildConfigField("String", "API_KEY", getApiKey())
     }
 
     buildTypes {
@@ -64,4 +65,11 @@ dependencies {
     implementation "com.aallam.openai:openai-client:2.0.0"
     implementation("androidx.navigation:navigation-compose:2.5.2")
     implementation "com.google.accompanist:accompanist-systemuicontroller:0.25.1"
+}
+
+String getApiKey() {
+    def propFile = rootProject.file("./local.properties")
+    def properties = new Properties()
+    properties.load(new FileInputStream(propFile))
+    return properties['API_KEY']
 }
